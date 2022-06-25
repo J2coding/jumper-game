@@ -31,11 +31,10 @@ class Hider:
             " /  \\"
             "       ",
             "^^^^^^^",
-            " "
-        ]
+            " "        ]
 
-        self.lives =7
-        for _ in self.word:
+        self._lives =7
+        for _ in self._word:
             self._results.append('_')
             self._index_of = 0
 
