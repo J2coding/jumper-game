@@ -8,7 +8,8 @@
     If the puzzle is solved the game is over.
     If the player has no more parachute the game is over.
 
-
+# About 
+The game is an example of encapsulation in object oriented programming in python where data variables and methods are bundled in same unit code and the rest of classe are not able to change or modify directly.
         
 
 ## Getting Started
@@ -25,7 +26,9 @@ root                    (project root folder)
 +-- seeker              (source code for game)
   +-- game              (specific classes)
   +-- __main__.py       (program entry point)
-  +-- hider               (game variables and methods)
+  +-- hider               (keeps track of distance and location)
+  + -- terminal_services (handles terminal services)
+  +-- word.txt ( random words to choose)
 +-- README.md           (general info)
 ```
 
