@@ -37,30 +37,36 @@ class Director:
             self._get_inputs()
             self._do_updates()
             self._do_outputs()
+        
 
     def _get_inputs(self):
         """Moves the seeker to a new location.
 
         Args:
             self (Director): An instance of Director.
+        "        
         """
         while self._run_once:
             for line in self._hider._parachuteMan:# will print jumper line
                 print(line)
+                    
 
             # show game info
-            hint = self._hider.get_hint()
+            hint = self._hider.get_hint()# prints the underscores
             self._terminal_service.write_text(hint)
+            
 
             self._run_once = False
 
-        ans = self._terminal_service.read_number(
-            "\nGuess a letter of a word: ")
+        ans = self._terminal_service.read_number( "\nGuess a letter of a word: ")
 
         self._seeker.move_location(ans)
+    
 
     def _do_updates(self):
-        """Keeps watch on where the seeker is moving.
+        """ 
+        
+        Keeps watch on where the seeker is moving.
 
         Args:
             self (Director): An instance of Director.

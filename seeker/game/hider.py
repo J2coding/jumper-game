@@ -28,8 +28,8 @@ class Hider:
             " \\ /",
             "  O",
             " /|\\",
-            " /  \\"
-            "       ",
+            " / \\",
+            "      ",
             "^^^^^^^",
             " "        ]
 
@@ -78,7 +78,7 @@ class Hider:
         if '_' not in self._results:
             print("you won")
             returning = True
-            print(self._results)
+            print(f"The correct word is: {''.join(self._results)}")
             input('play again!')
 
         return returning
@@ -91,7 +91,9 @@ class Hider:
         """
         letter = seeker.get_location()
         index_of = 0
+
         if letter in self._word:
+
             # getting the index of where is ans located in word
             index_of = self._word.index(letter)
             # print(f'the index is {index_of}')
@@ -103,5 +105,5 @@ class Hider:
             # remove first index in jumper
             self._parachuteMan.pop(0)
             # replace head with x
-            if len(self._parachuteMan) == 3:
-                self._parachuteMan[0] = "  x"
+        if self._lives == 0:
+           self._parachuteMan[0] = "  x"
