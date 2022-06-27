@@ -70,7 +70,7 @@ class Hider:
         returning = False
 
         if self._lives == 0:
-            print("You lose!")
+            print("No lives left!")
             returning = True
 
         # replace results items,
