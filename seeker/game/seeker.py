@@ -27,7 +27,7 @@ class Seeker:
         """
         return self._location
 
-    def move_location(self, location):
+    def move_location(self,  location):
         """Moves to the given location.
 
         Args:
