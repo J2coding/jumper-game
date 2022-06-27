@@ -21,7 +21,7 @@ class Hider:
         self._word ='QWERTY'
         self._results =[]
         self._points =[]
-        self._jumper =[
+        self._parachuteMan =[
             " ___",
             "/___\\",
             "\\   /",
@@ -33,7 +33,7 @@ class Hider:
             "^^^^^^^",
             " "        ]
 
-        self._lives =7
+        self._lives = 4
         for _ in self._word:
             self._results.append('_')
             self._index_of = 0
@@ -101,7 +101,7 @@ class Hider:
             # reduce lives
             self._lives = self._lives - 1
             # remove first index in jumper
-            self._jumper.pop(0)
+            self._parachuteMan.pop(0)
             # replace head with x
-            if len(self._jumper) == 3:
-                self._jumper[0] = "  x"
+            if len(self._parachuteMan) == 3:
+                self._parachuteMan[0] = "  x"

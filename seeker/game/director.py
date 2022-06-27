@@ -45,7 +45,7 @@ class Director:
             self (Director): An instance of Director.
         """
         while self._run_once:
-            for line in self._hider._jumper:# will print jumper line
+            for line in self._hider._parachuteMan:# will print jumper line
                 print(line)
 
             # show game info
@@ -75,7 +75,7 @@ class Director:
         """
         print()
         # sho every line in jumper
-        for line in self._hider._jumper:
+        for line in self._hider._parachuteMan:
             print(line)
 
         # show game info
