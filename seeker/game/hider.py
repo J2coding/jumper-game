@@ -18,7 +18,25 @@ class Hider:
         Args:
             self (Hider): An instance of Hider.
         """
-        self._word ='QWERTY'
+        # self._words=[ "tree","table","chair",
+        # "sit","cat","boy","girl","play"]
+
+        self._words= [
+                    'The wise man',
+                    'snowman',
+                    'sneaky one',
+                    'i see you',
+                    'you dont see me',
+                    'quit',
+                    'preaty',
+                    'girl',
+                    'Had man',
+                    'man hud ',
+                    'meel wow',
+                ]
+        self._word = random.choice(self._words).upper()
+
+        #self._word = random.choice(self._words).upper()
         self._results =[]
         self._points =[]
         self._parachuteMan =[
@@ -34,9 +52,13 @@ class Hider:
             " "        ]
 
         self._lives = 4
-        for _ in self._word:
-            self._results.append('_')
-            self._index_of = 0
+        for i in self._word:
+            if i ==" ":
+                self._results.append(" ")
+            else:
+                self._results.append('_')
+
+        
 
             self._location = random.randint(1, 1000)
             self._distance = [0, 0]  
@@ -95,10 +117,22 @@ class Hider:
         if letter in self._word:
 
             # getting the index of where is ans located in word
-            index_of = self._word.index(letter)
+            #index_of = self._word.index(letter)
             # print(f'the index is {index_of}')
             # set collected input
-            self._results[index_of] = letter
+            for i in range(len(self._word)):
+                #print(self._results)
+                if self._word[i]==letter:
+
+                   self._results[i] = letter
+                if self._word[i]== " ":
+                    self._results[i] = " "
+            #print(self._results)
+            #print(letter)
+
+                    
+
+
         else:
             # reduce lives
             self._lives = self._lives - 1
